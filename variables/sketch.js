@@ -25,8 +25,8 @@ function draw() {
     rect(x - 200, y - 150, faceSize/10, faceSize/5); // left eye
     triangle(
         x + 100, y - 100, 
-        x + 150, y - 50, 
-        x + 200, y - 100
+        x + 100, y - 50, 
+        x + 100, y - 50
     ); // right eye
     
     strokeWeight(10);
