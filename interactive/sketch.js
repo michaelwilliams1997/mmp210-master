@@ -1,41 +1,30 @@
-function setup(fruit) {
+function setup() { 
 	createCanvas(600, 400);
+	rectMode(CENTER);
+} 
+function draw() { 
+	background(50,100, 200) ;
+    fill("lavender")
+     
+
+	
+	var x = mouseX;
+	var y = mouseY;
+	var offset = 100;
+
+	noStroke();
+	circle( x, y, 140, height);
+	rect( x, y, 100, height); // face
+
+	stroke("black");
+	fill("red");
+	ellipse(x - offset, y - offset, 40); // right eye
+	ellipse(x + offset, y - offset, 40); // left eye
+	rect(x, y + offset, 40, 20, 10); // mouth
+	rect(x, y + offset,150, 168, 50, 100);
+	
+	fill('green');
+	
+	ellipse(mouseX/2 + x, y, mouseX, 10);
 }
 
-var x = 300;
-var y = 200;
-var faceSize = 500;
-
-function setup() {
-    createCanvas(600, 400);
-}
-
-function draw() {
-    background(100, 0, 255);
-    
-    x = mouseX;
-    y = mouseY;
-    
-    fill("Blue");
-    noStroke();
-    ellipse(x, y, faceSize, faceSize/2); // face
-    
-    stroke("red");
-    noFill();
-    strokeWeight(5);
-    fill(250, 100, 100, 100);
-   
-    rect(x - 200, y - 150, faceSize/10, faceSize/5); // left eye
-    triangle(
-        x + 100, y - 100, 
-        x + 100, y - 50, 
-        x + 100, y - 50
-    ); // right eye
-    
-    strokeWeight(10);
-    stroke("black");
-    line(
-        x - 150, y + 150, 
-        x + 100, y + 150
-    ); // mouth
-}
