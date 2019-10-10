@@ -1,38 +1,43 @@
-function setup(fruit) {
-	createCanvas(600, 400);
+* {
+  box-sizing: border-box;
 }
 
-var x = 300;
-var y = 200;
-var faceSize = 500;
-
-function setup() {
-    createCanvas(610, 420);
+.meme {
+  margin: auto;
+  width: 450px;
+  height: 450px;
+  background-image: url('http://vignette1.wikia.nocookie.net/meme/images/7/71/BusinessCat2.jpg');
+  background-size: 100%; 
+  text-align: center;
+  position: relative;
 }
 
-function draw() {
-    background(100, 0, 255);
-    
-    fill("Blue");
-    noStroke();
-    ellipse(x, y, faceSize, faceSize/2); // face
-    
-    stroke("red");
-    noFill();
-    strokeWeight(5);
-    fill(250, 100, 100, 100);
-   
-    rect(x - 200, y - 150, faceSize/10, faceSize/5); // left eye
-    triangle(
-        x + 100, y - 100, 
-        x + 100, y - 50, 
-        x + 100, y - 50
-    ); // right eye
-    
-    strokeWeight(10);
-    stroke("black");
-    line(
-        x - 150, y + 150, 
-        x + 100, y + 150
-    ); // mouth
+p {
+  position: absolute; 
+  left: 0;
+  right: 0; 
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:2px 2px 0 #000,
+  -2px -2px 0 #000;\,
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+  0px 2px 0 #000,
+  2px 0px 0 #000,
+  0px -2px 0 #000,
+  -2px 0px 0 #000,
+  2px 2px 5px #000;
 }
+
+.bottom {
+   bottom: 0;
+ }
+
+.top {
+   top: 0;
+ }
