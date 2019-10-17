@@ -2,37 +2,22 @@ function setup(fruit) {
 	createCanvas(600, 400);
 }
 
-var x = 300;
-var y = 200;
-var faceSize = 500;
-
-function setup() {
-    createCanvas(610, 420);
-}
-
 function draw() {
-    background(100, 0, 255);
+	background(50,100, 200) ;
+	var x = mouseX;
+	var y = mouseY;
+	var offset = 100;
+
+	noStroke();
+	circle( x, y, 140, height);
+	rect( x, y, 100, height);
+	fill("lavender")
+     
+	ellipse(300, 188, 50, 100);
     
-    fill("Blue");
-    noStroke();
-    ellipse(x, y, faceSize, faceSize/2); // face
     
-    stroke("red");
-    noFill();
-    strokeWeight(5);
-    fill(250, 100, 100, 100);
-   
-    rect(x - 200, y - 150, faceSize/10, faceSize/5); // left eye
-    triangle(
-        x + 100, y - 100, 
-        x + 100, y - 50, 
-        x + 100, y - 50
-    ); // right eye
-    
-    strokeWeight(10);
-    stroke("black");
-    line(
-        x - 150, y + 150, 
-        x + 100, y + 150
-    ); // mouth
+	rect(90, 90, 155, 155);
+    circle(88, 240, 70);
+    circle(245, 240, 70);    
 }
+
