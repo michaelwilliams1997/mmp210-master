@@ -12,36 +12,35 @@ function setup() {
 function draw() {
     image(img, 0, 0);
 
-    var caption 
+    var caption = "i whip";
+    
+    translate(width/2, height/2);
+    
     var r = frameCount / 1000 * PI;
-    rotate(r); "i whip";
+    rotate(r);
+    
 
     if (mouseX > width / 2 & mouseY < height / 2) {
-        var caption 
-        var r = frameCount / 1000 * PI;
-        rotate(r); "my";
+        rotate(r);
+        caption = "my";
     } else if (mouseX < width / 2 && mouseY > height / 2) {
-        var caption 
-        var r = frameCount / 1000 * PI;
-        rotate(r); "tail!";
+        rotate(r);
+        caption = "tail!";
     } else if (mouseY > height / 2) {
-        var caption 
-        var r = frameCount / 1000 * PI;
-        rotate(r); "Back and Forth!";
+        rotate(r);
+       caption = "Back and Forth!";
     }
 
+    
+
+    rect(0, 0, 100, 100);
 
 
-   
-
-     rect(0, 0, 100, 100);
-
-
-textAlign(CENTER, CENTER);
-textSize(10);
-textFont("Comic Sans MS");
-fill("yellow");
-stroke("white");
-strokeWeight(8);
-text(caption, width / 2, height / 2);
+    textAlign(CENTER, CENTER);
+    textSize(80);
+    textFont("Comic Sans MS");
+    fill("yellow");
+    stroke("white");
+    strokeWeight(8);
+    text(caption, 0, 0);
 }

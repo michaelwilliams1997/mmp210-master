@@ -25,6 +25,8 @@ function draw() {
 	
 	fill('green');
 	
-	ellipse(mouseX/2 + x, y, mouseX, 10);
+    var w = map(x, 0, width, 100, 250)
+    
+	ellipse(x, y, w, 10);
 }
 
